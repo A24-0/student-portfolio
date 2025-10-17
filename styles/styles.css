@@ -1,0 +1,426 @@
+:root {
+  --bg: #ffffff;
+  --panel: #f8f9fa;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --brand: #0d6efd;
+  --brand-2: #6ea8fe;
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --accent: #16a34a
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif
+}
+
+img {
+  max-width: 100%;
+  display: block
+}
+
+.container {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+  padding: 0 16px
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border)
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--brand);
+  box-shadow: 0 0 0 2px #00000008 inset
+}
+
+.logo-link {
+  display: inline-flex
+}
+
+.student-name {
+  font-weight: 700;
+  letter-spacing: .2px
+}
+
+.main-nav {
+  display: flex;
+  gap: 12px
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 12px;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 8px
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text);
+  background: #f3f4f6
+}
+
+/* Hero */
+.hero {
+  padding: 40px 0
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  align-items: center
+}
+
+.hero-photo img {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--card)
+}
+
+.hero-text h1 {
+  margin: 0 0 8px
+}
+
+.button {
+  display: inline-block;
+  background: var(--brand);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600
+}
+
+.button:hover {
+  background: var(--brand-2)
+}
+
+/* Skills */
+.skills {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: #f9fafb
+}
+
+.skills h2 {
+  margin: 0 0 16px
+}
+
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: center
+}
+
+.progress {
+  height: 24px;
+  background: #f3f4f6;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--brand));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff
+}
+
+/* Projects */
+.featured-projects {
+  padding: 28px 0
+}
+
+.featured-projects h2 {
+  margin: 0 0 16px
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column
+}
+
+.card-body {
+  padding: 12px 12px 14px
+}
+
+.card h3 {
+  margin: 4px 0 6px
+}
+
+.link {
+  color: var(--brand);
+  text-decoration: none
+}
+
+.link:hover {
+  text-decoration: underline
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+  margin-top: 24px
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px
+}
+
+.socials {
+  display: flex;
+  gap: 10px
+}
+
+.socials img {
+  width: 20px;
+  height: 20px
+}
+
+.socials a:hover img {
+  opacity: 1;
+  filter: none
+}
+
+/* Pages */
+.page-title {
+  margin: 18px 0
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 16px
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  cursor: pointer
+}
+
+.chip[aria-pressed="true"],
+.chip:hover {
+  background: #f3f4f6
+}
+
+/* Grid - use Bootstrap row/gutters for projects */
+.projects-grid {}
+
+.project-card {
+  overflow: hidden
+}
+
+.project-card .body {
+  padding: 12px
+}
+
+.tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f3f4f6;
+  font-size: 12px;
+  color: var(--muted)
+}
+
+/* Diary */
+.timeline {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0
+}
+
+.timeline-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px
+}
+
+.status-done {
+  color: #79dd8a
+}
+
+.status-progress {
+  color: #f1c40f
+}
+
+.course-progress {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px
+}
+
+/* Forms */
+.form {
+  display: grid;
+  gap: 10px;
+  max-width: 560px
+}
+
+.form label {
+  display: grid;
+  gap: 6px
+}
+
+.input,
+.textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text)
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical
+}
+
+.submit {
+  justify-self: start
+}
+
+@media (max-width:720px) {
+  .hero-inner {
+    grid-template-columns: 1fr
+  }
+
+  .skill {
+    grid-template-columns: 1fr
+  }
+}
+
+/* Modal (custom, avoid Bootstrap name collisions) */
+.sp-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #00000080;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200
+}
+
+.sp-modal-backdrop[aria-hidden="false"] {
+  display: flex
+}
+
+.sp-modal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 720px;
+  width: calc(100% - 32px);
+  box-shadow: 0 20px 60px #00000020
+}
+
+.sp-modal .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border)
+}
+
+.sp-modal .modal-title {
+  margin: 0;
+  font-size: 18px
+}
+
+.sp-modal .modal-close {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-size: 22px;
+  cursor: pointer
+}
+
+.sp-modal .modal-close:hover {
+  color: var(--text)
+}
+
+.sp-modal .modal-body {
+  padding: 16px
+}
+
+.sp-modal .modal-body img {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 10px
+}

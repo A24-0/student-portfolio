@@ -18,7 +18,12 @@
             <span class="student-name">Гришутина Ангелина</span>
           </div>
         </div>
-        <nav class="main-nav" aria-label="Основная навигация">
+        <button class="nav-toggle" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle__dot"></span>
+          <span class="nav-toggle__dot"></span>
+          <span class="nav-toggle__dot"></span>
+        </button>
+        <nav id="site-nav" class="main-nav" aria-label="Основная навигация">
           <a class="nav-link active" href="index.html">Главная</a>
           <a class="nav-link" href="pages/projects.html">Проекты</a>
           <a class="nav-link" href="pages/diary.html">Дневник</a>
@@ -31,12 +36,22 @@
       <section class="hero py-4">
         <div class="container hero-inner">
           <div class="hero-photo">
-            <img src="images/my_photo.jpg" alt="Фото студента" />
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/my_photo.jpg">
+              <source media="(min-width: 768px)" srcset="images/my_photo.jpg">
+              <source media="(min-width: 480px)" srcset="images/my_photo.jpg">
+              <img src="images/my_photo.jpg" 
+                   alt="Фото студента" 
+                   class="responsive-image retina-image"
+                   loading="eager"
+                   width="200"
+                   height="200">
+            </picture>
           </div>
           <div class="hero-text">
             <h1>Привет! Я Гришутина Ангелина</h1>
             <p>Факультет ИТ, группа ЭФБО-17-24. Увлекаюсь веб‑разработкой и программированием.</p>
-            <a class="btn btn-primary" href="assets/resume.pdf" download>Скачать резюме</a>
+            <a class="btn btn-primary" href="assets/cat_resume.docx" download>Скачать резюме</a>
           </div>
         </div>
       </section>
@@ -78,7 +93,18 @@
           <h2>Лучшие проекты</h2>
           <div class="row g-3">
             <article class="card col-12 col-sm-6 col-md-4">
-              <img class="card-img-top" src="images/project1.jpg" alt="Проект 1 — Личный сайт" />
+              <div class="image-container">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="images/project1.jpg">
+                  <source media="(min-width: 768px)" srcset="images/project1.jpg">
+                  <img class="card-img-top aspect-ratio-image" 
+                       src="images/project1.jpg" 
+                       alt="Проект 1 — Личный сайт"
+                       loading="lazy"
+                       width="400"
+                       height="225">
+                </picture>
+              </div>
               <div class="card-body">
                 <h3>Личный сайт</h3>
                 <p>HTML, CSS</p>
@@ -86,7 +112,18 @@
               </div>
             </article>
             <article class="card col-12 col-sm-6 col-md-4">
-              <img class="card-img-top" src="images/to_do.jpg" alt="Проект 2 — Todo‑приложение" />
+              <div class="image-container">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="images/to_do.jpg">
+                  <source media="(min-width: 768px)" srcset="images/to_do.jpg">
+                  <img class="card-img-top aspect-ratio-image" 
+                       src="images/to_do.jpg" 
+                       alt="Проект 2 — Todo‑приложение"
+                       loading="lazy"
+                       width="400"
+                       height="225">
+                </picture>
+              </div>
               <div class="card-body">
                 <h3>Todo‑приложение</h3>
                 <p>JavaScript</p>
@@ -94,7 +131,18 @@
               </div>
             </article>
             <article class="card col-12 col-sm-6 col-md-4">
-              <img class="card-img-top" src="images/project3.jpg" alt="Проект 3 — Интернет‑магазин" />
+              <div class="image-container">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="images/project3.jpg">
+                  <source media="(min-width: 768px)" srcset="images/project3.jpg">
+                  <img class="card-img-top aspect-ratio-image" 
+                       src="images/project3.jpg" 
+                       alt="Проект 3 — Интернет‑магазин"
+                       loading="lazy"
+                       width="400"
+                       height="225">
+                </picture>
+              </div>
               <div class="card-body">
                 <h3>Интернет‑магазин</h3>
                 <p>React</p>

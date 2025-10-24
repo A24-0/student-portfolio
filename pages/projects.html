@@ -18,7 +18,12 @@
             <span class="student-name">Гришутина Ангелина</span>
           </div>
         </div>
-        <nav class="main-nav" aria-label="Основная навигация">
+        <button class="nav-toggle" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle__dot"></span>
+          <span class="nav-toggle__dot"></span>
+          <span class="nav-toggle__dot"></span>
+        </button>
+        <nav id="site-nav" class="main-nav" aria-label="Основная навигация">
           <a class="nav-link" href="../index.html">Главная</a>
           <a class="nav-link active" href="./projects.html">Проекты</a>
           <a class="nav-link" href="./diary.html">Дневник</a>
@@ -38,7 +43,18 @@
 
       <section class="projects-grid row g-3" id="projects-grid">
         <article class="project-card card col-12 col-sm-6 col-md-4" data-tags="html css">
-          <img class="card-img-top" src="../images/project1.jpg" alt="Личный сайт" />
+          <div class="image-container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="../images/project1.jpg">
+              <source media="(min-width: 768px)" srcset="../images/project1.jpg">
+              <img class="card-img-top aspect-ratio-image" 
+                   src="../images/project1.jpg" 
+                   alt="Личный сайт"
+                   loading="lazy"
+                   width="400"
+                   height="225">
+            </picture>
+          </div>
           <div class="body card-body">
             <h3>Личный сайт</h3>
             <p>Визитка и портфолио. Адаптивная вёрстка.</p>
@@ -49,7 +65,18 @@
           </div>
         </article>
         <article class="project-card card col-12 col-sm-6 col-md-4" data-tags="js">
-          <img class="card-img-top" src="../images/to_do.jpg" alt="Todo-приложение" />
+          <div class="image-container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="../images/to_do.jpg">
+              <source media="(min-width: 768px)" srcset="../images/to_do.jpg">
+              <img class="card-img-top aspect-ratio-image" 
+                   src="../images/to_do.jpg" 
+                   alt="Todo-приложение"
+                   loading="lazy"
+                   width="400"
+                   height="225">
+            </picture>
+          </div>
           <div class="body card-body">
             <h3>Todo‑приложение</h3>
             <p>Список задач с локальным хранением.</p>
@@ -59,7 +86,18 @@
           </div>
         </article>
         <article class="project-card card col-12 col-sm-6 col-md-4" data-tags="react">
-          <img class="card-img-top" src="../images/project3.jpg" alt="Интернет‑магазин" />
+          <div class="image-container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="../images/project3.jpg">
+              <source media="(min-width: 768px)" srcset="../images/project3.jpg">
+              <img class="card-img-top aspect-ratio-image" 
+                   src="../images/project3.jpg" 
+                   alt="Интернет‑магазин"
+                   loading="lazy"
+                   width="400"
+                   height="225">
+            </picture>
+          </div>
           <div class="body card-body">
             <h3>Интернет‑магазин</h3>
             <p>Каталог, корзина, фильтры.</p>
@@ -69,7 +107,18 @@
           </div>
         </article>
         <article class="project-card card col-12 col-sm-6 col-md-4" data-tags="bootstrap">
-          <img class="card-img-top" src="../images/project4.jpg" alt="Портфолио" />
+          <div class="image-container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="../images/project4.jpg">
+              <source media="(min-width: 768px)" srcset="../images/project4.jpg">
+              <img class="card-img-top aspect-ratio-image" 
+                   src="../images/project4.jpg" 
+                   alt="Портфолио"
+                   loading="lazy"
+                   width="400"
+                   height="225">
+            </picture>
+          </div>
           <div class="body card-body">
             <h3>Портфолио</h3>
             <p>Сетка карточек и модальные окна.</p>
@@ -88,6 +137,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="../scripts/filters.js"></script>
     <script src="../scripts/modal.js"></script>
   </body>

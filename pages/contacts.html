@@ -18,7 +18,12 @@
             <span class="student-name">Гришутина Ангелина</span>
           </div>
         </div>
-        <nav class="main-nav" aria-label="Основная навигация">
+        <button class="nav-toggle" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle__dot"></span>
+          <span class="nav-toggle__dot"></span>
+          <span class="nav-toggle__dot"></span>
+        </button>
+        <nav id="site-nav" class="main-nav" aria-label="Основная навигация">
           <a class="nav-link" href="../index.html">Главная</a>
           <a class="nav-link" href="./projects.html">Проекты</a>
           <a class="nav-link" href="./diary.html">Дневник</a>
@@ -52,6 +57,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="../scripts/form-validation.js"></script>
   </body>
   </html>

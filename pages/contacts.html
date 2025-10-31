@@ -27,7 +27,7 @@
           <a class="nav-link" href="../index.html">Главная</a>
           <a class="nav-link" href="./projects.html">Проекты</a>
           <a class="nav-link" href="./diary.html">Дневник</a>
-          <a class="nav-link active" href="./contacts.html">Контакты</a>
+          <a class="nav-link active" href="./contacts.html" aria-current="page">Контакты</a>
         </nav>
       </div>
     </header>
@@ -35,11 +35,36 @@
     <main class="container">
       <h1 class="page-title">Свяжитесь со мной</h1>
 
-      <form class="form" id="contact-form" novalidate>
-        <label>Имя<input class="input form-control" type="text" name="name" required /></label>
-        <label>Почта<input class="input form-control" type="email" name="email" required /></label>
-        <label>Сообщение<textarea class="textarea form-control" name="message" required></textarea></label>
-        <button class="btn btn-primary submit" type="submit">Отправить сообщение</button>
+      <form class="form" id="contact-form" novalidate aria-describedby="form-helper form-errors" aria-labelledby="contact-form-legend">
+        <fieldset>
+          <legend id="contact-form-legend">Форма обратной связи</legend>
+
+          <div>
+            <label for="name">Имя <span aria-hidden="true">*</span></label>
+            <input id="name" class="input form-control" type="text" name="name" required aria-required="true" aria-describedby="name-help" />
+            <div id="name-help" class="form-text">Введите ваше полное имя.</div>
+            <div id="name-error" class="error-text" aria-live="assertive"></div>
+          </div>
+
+          <div>
+            <label for="email">Почта <span aria-hidden="true">*</span></label>
+            <input id="email" class="input form-control" type="email" name="email" required aria-required="true" aria-describedby="email-help" />
+            <div id="email-help" class="form-text">Укажите действительный адрес электронной почты.</div>
+            <div id="email-error" class="error-text" aria-live="assertive"></div>
+          </div>
+
+          <div>
+            <label for="message">Сообщение <span aria-hidden="true">*</span></label>
+            <textarea id="message" class="textarea form-control" name="message" required aria-required="true" aria-describedby="message-help"></textarea>
+            <div id="message-help" class="form-text">Коротко опишите запрос или сообщение.</div>
+            <div id="message-error" class="error-text" aria-live="assertive"></div>
+          </div>
+
+          <p id="form-helper" class="form-text">Поля, отмеченные * — обязательные.</p>
+          <div id="form-errors" class="sr-only" aria-live="polite"></div>
+
+          <button class="btn btn-primary submit" type="submit">Отправить сообщение</button>
+        </fieldset>
       </form>
 
       <section style="margin-top:16px">
